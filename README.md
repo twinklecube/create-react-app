@@ -11,3 +11,11 @@
     <li>less</li>
     <li>less modules</li>
 </ul>
+
+<h3>Images: jpg, jpeg, svg, png, gif, webp</h3>
+
+<h3></h3>
+
+<h3></h3>
+
+<h3></h3>

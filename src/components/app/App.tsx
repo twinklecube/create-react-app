@@ -1,11 +1,8 @@
 import React from 'react';
-import Css from "../css/Css";
 
 const App = () => {
     return (
-        <>
-            <Css />
-        </>
+        <div>React app</div>
     );
 };
 

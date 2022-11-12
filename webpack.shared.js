@@ -47,6 +47,33 @@ module.exports = {
                     "sass-loader"
                 ],
                 exclude: [/\.module\.(css|s(a|c)ss)$/, /node_modules/]
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: {
+                                localIdentName: "[name]__[local]___[hash:base64:5]",
+                                exportLocalsConvention: 'camelCase'
+                            }
+                        }
+                    },
+                    "less-loader"
+                ],
+                include: /\.module\.less$/,
+                exclude: /node_modules/
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "less-loader"
+                ],
+                exclude: [/\.module\.less$/, /node_modules/]
             }
         ]
     },

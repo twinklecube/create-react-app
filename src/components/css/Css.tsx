@@ -5,7 +5,7 @@ import "./scssStyle.scss";
 import scssStyles from './scssStyle.module.scss';
 import './lessStyle.less';
 import lessStyles from './lessStyle.module.less';
-import olympiaParkImg from '../../../public/images/olympia-park-munich.jpg'
+import olympiaParkImg from '../../../assets/olympia-park-munich.jpg';
 
 const Css = () => {
     return (

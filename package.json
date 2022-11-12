@@ -1,7 +1,8 @@
 {
-  "name": "create-react-app",
+  "name": "twinklecube/create-react-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "boiler plate react app with typescript",
+  "bin": "./bin/cli.js",
   "main": "index.js",
   "scripts": {
     "build": "npx rimraf dist && webpack --config=webpack.prod.js",

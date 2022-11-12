@@ -1,5 +1,5 @@
 {
-  "name": "twinklecube/create-react-app",
+  "name": "@twinklecube/create-react-app",
   "version": "1.0.0",
   "description": "boiler plate react app with typescript",
   "bin": "./bin/cli.js",

@@ -16,7 +16,7 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.css$/,
+                test: /\.(css|s(a|c)ss)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     {
@@ -28,18 +28,25 @@ module.exports = {
                                 exportLocalsConvention: 'camelCase'
                             }
                         }
-                    }
+                    },
+                    "sass-loader"
                 ],
-                include: /\.module\.css$/,
+                include: /\.module\.(css|s(a|c)ss)$/,
                 exclude: /node_modules/
             },
             {
-                test: /\.css$/,
+                test: /\.(css|s(a|c)ss)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    "css-loader"
+                    {
+                        loader: "css-loader",
+                        options: {
+                            importLoaders: 1,
+                        }
+                    },
+                    "sass-loader"
                 ],
-                exclude: [/\.module\.css$/, /node_modules/]
+                exclude: [/\.module\.(css|s(a|c)ss)$/, /node_modules/]
             }
         ]
     },

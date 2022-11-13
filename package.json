@@ -1,6 +1,6 @@
 {
   "name": "@twinklecube/create-react-app",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "boiler plate react 18 typescript app",
   "bin": "./bin/cli.js",
   "main": "index.js",
@@ -12,7 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/twinklecube/create-react-app.git"
   },
-  "keywords": ["react", "typescript"],
+  "keywords": [
+    "react",
+    "typescript"
+  ],
   "author": "twinklecube",
   "license": "ISC",
   "bugs": {
@@ -29,6 +32,7 @@
     "@types/react-dom": "^18.0.8",
     "@types/styled-components": "^5.1.26",
     "babel-loader": "^9.1.0",
+    "copy-webpack-plugin": "^11.0.0",
     "core-js": "^3.26.0",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",

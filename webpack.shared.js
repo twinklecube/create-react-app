@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/index.tsx',
@@ -86,7 +87,21 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'public', 'index.html')
         }),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin(),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, 'node_modules', '@twinklecube', 'create-ui-library', 'dist', 'esm', 'images'),
+                    to: path.join(__dirname, 'dist', 'images'),
+                    noErrorOnMissing: true
+                },
+                {
+                    from: path.resolve(__dirname, 'node_modules', '@twinklecube', 'create-ui-library', 'dist', 'esm', 'fonts'),
+                    to: path.join(__dirname, 'dist', 'fonts'),
+                    noErrorOnMissing: true
+                }
+            ]
+        })
     ],
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.css'],

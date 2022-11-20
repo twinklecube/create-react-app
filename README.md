@@ -12,7 +12,7 @@ or install in the current folder<br />
 <h3>Run and Build</h3>
 
 run in development server<br />
-`npm run dev`
+`npm start`
 <br />
 this command will open the rect app on port 3000<br />
 `http:localhost:3000`

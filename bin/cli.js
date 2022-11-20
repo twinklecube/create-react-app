@@ -20,8 +20,14 @@ const packageName = repoName !== '.'? repoName : 'react-app'
 
 const installDepsCommand = `cd ${repoName} && npm install`;
 const setupNameCommand = `cd ${repoName} && npm pkg set name=${packageName}`;
+const setupAuthorCommand = `cd ${repoName} && npm pkg set author=''`;
 const setupVersionCommand = `cd ${repoName} && npm pkg set version=1.0.0`;
-const setupDeleteBinCommand = `cd ${repoName} && npm pkg delete bin`;
+const deleteBinCommand = `cd ${repoName} && npm pkg delete bin`;
+const deleteRepositoryCommand = `cd ${repoName} && npm pkg delete repository`;
+const deleteKeywordsCommand = `cd ${repoName} && npm pkg delete keywords`;
+const deleteBugsCommand = `cd ${repoName} && npm pkg delete bugs`;
+const deleteHomepageCommand = `cd ${repoName} && npm pkg delete homepage`;
+
 
 console.log(`\nCreating a new react app...`);
 
@@ -44,7 +50,12 @@ fs.rmSync(`./${repoName}/temp/`, {recursive: true, force: true});
 console.log(`\nSetting up the project...`);
 runCommand(setupNameCommand);
 runCommand(setupVersionCommand);
-runCommand(setupDeleteBinCommand);
+runCommand(setupAuthorCommand);
+runCommand(deleteBinCommand);
+runCommand(deleteHomepageCommand);
+runCommand(deleteKeywordsCommand);
+runCommand(deleteBugsCommand);
+runCommand(deleteRepositoryCommand);
 
 console.log(`\nInstalling dependencies...\n`);
 const installedDeps = runCommand(installDepsCommand);
